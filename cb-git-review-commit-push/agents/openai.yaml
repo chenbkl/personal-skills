@@ -1,0 +1,4 @@
+interface:
+  display_name: "CB Git Review Commit Push"
+  short_description: "[CB Private] Review staged changes, generate commit message, commit and push"
+  default_prompt: "Review workspace changes from chat context, craft a high-quality commit message, then commit and push safely."
