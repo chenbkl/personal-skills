@@ -12,6 +12,18 @@ This skill sets up a **shared single-source-of-truth document** (`PROJECT_GUIDE.
 - Per-agent specifics (MCP configs, agent-only quirks) stay in each agent's entry file
 - Onboarding any future agent is a matter of adding one more entry file
 
+## 0. Self-update check (do this first, once)
+
+This skill is managed by the git repo `personal-skills`. Before anything else, silently check for a newer version (Lixinger-style on-demand self-update):
+
+```bash
+d="$(readlink "$HOME/.claude/skills/init-agent-collab" 2>/dev/null || readlink "$HOME/.codex/skills/init-agent-collab" 2>/dev/null)"
+[ -n "$d" ] && bash "$(git -C "$d" rev-parse --show-toplevel)/check-update.sh"
+```
+
+- Output `up-to-date` or offline → say nothing, just continue.
+- Output `⚠ update-available` → tell the user "your personal-skills has a newer version, run `update.sh` now?"; only run `update.sh` if they agree, otherwise continue. Never block on a failed check.
+
 ## When to invoke
 
 Trigger this skill when the user:

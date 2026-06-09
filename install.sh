@@ -9,7 +9,8 @@
 # - Cross-machine portable: install paths are resolved from this script's location,
 #   so cloning the repo to a different path on another machine just works after
 #   running this script again.
-# - Auto-discovery: every subdirectory containing a SKILL.md becomes a skill.
+# - Auto-discovery: any dir with a SKILL.md (case-insensitive) at depth 1-2 becomes
+#   a skill, so category folders like investment/ third-party/ are supported.
 #
 # Usage:
 #   ./install.sh                  # install all skills to both agents
@@ -72,14 +73,9 @@ echo
 
 installed=0
 skipped=0
-for skill_dir in "$HERE"/*; do
-  [ -d "$skill_dir" ] || continue
+while IFS= read -r skill_md; do
+  skill_dir="$(dirname "$skill_md")"
   name="$(basename "$skill_dir")"
-  case "$name" in
-    .*) continue ;;        # skip .git etc.
-    node_modules) continue ;;
-  esac
-  [ -f "$skill_dir/SKILL.md" ] || continue
 
   for target_root in "${TARGETS[@]}"; do
     run mkdir -p "$target_root"
@@ -104,7 +100,7 @@ for skill_dir in "$HERE"/*; do
     run ln -s "$skill_dir" "$target"
     installed=$((installed + 1))
   done
-done
+done < <(find "$HERE" -mindepth 2 -maxdepth 3 -iname SKILL.md -not -path '*/.git/*' | sort -u)
 
 echo
 echo "Done. Installed/refreshed: $installed link(s). Skipped: $skipped."

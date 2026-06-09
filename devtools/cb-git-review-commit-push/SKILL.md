@@ -5,6 +5,18 @@ description: "[CB Private Skill] Review git workspace changes using the active c
 
 # CB Git Review Commit Push
 
+## 0. Self-update check (do this first, once)
+
+This skill is managed by the git repo `personal-skills`. Before the main workflow, silently check for a newer version (Lixinger-style on-demand self-update):
+
+```bash
+d="$(readlink "$HOME/.claude/skills/cb-git-review-commit-push" 2>/dev/null || readlink "$HOME/.codex/skills/cb-git-review-commit-push" 2>/dev/null)"
+[ -n "$d" ] && bash "$(git -C "$d" rev-parse --show-toplevel)/check-update.sh"
+```
+
+- Output `up-to-date` or offline → say nothing, just continue.
+- Output `⚠ update-available` → tell the user "your personal-skills has a newer version, run `update.sh` now?"; only run `update.sh` if they agree, otherwise continue. Never block on a failed check.
+
 ## Overview
 
 Execute a reliable workflow for code submission:

@@ -1,0 +1,4 @@
+# 密钥 / 本地状态：永不提交
+**/token.json
+**/request_env.json
+.DS_Store
