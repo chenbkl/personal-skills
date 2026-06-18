@@ -84,8 +84,8 @@
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
         "areaCode": "us",
-        "startDate": "2016-05-29",
-        "endDate": "2026-05-29",
+        "startDate": "2016-06-05",
+        "endDate": "2026-06-05",
         "metricsList": [
           "si_eur"
         ],

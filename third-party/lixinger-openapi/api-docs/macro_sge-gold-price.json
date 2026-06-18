@@ -1,7 +1,7 @@
 {
-  "api": "人民币指数API",
-  "apiKey": "macro/rmbidx",
-  "url": "https://open.lixinger.com/api/macro/rmbidx",
+  "api": "上海金",
+  "apiKey": "macro/sge-gold-price",
+  "url": "https://open.lixinger.com/api/macro/sge-gold-price",
   "method": "POST",
   "params": [
     {
@@ -41,14 +41,54 @@
       "constraints": [
         "limit仅在请求数据为date range的情况下生效。"
       ]
+    },
+    {
+      "name": "areaCode",
+      "required": "Yes",
+      "type": "String",
+      "descriptions": [
+        "地区代码。"
+      ],
+      "example": "cn",
+      "items": [
+        {
+          "label": "大陆",
+          "value": "cn"
+        }
+      ]
+    },
+    {
+      "name": "metricsList",
+      "required": "Yes",
+      "type": "Array",
+      "descriptions": [
+        "指标数组。"
+      ],
+      "example": "'sge_pm_cny'",
+      "regions": [
+        {
+          "label": "大陆支持:",
+          "items": [
+            {
+              "label": "上海金价格",
+              "value": "sge_pm_cny",
+              "ectByGranularity": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "requestExample": [
     {
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
-        "startDate": "2026-05-29",
-        "endDate": "2026-06-05",
+        "areaCode": "cn",
+        "startDate": "2016-06-04",
+        "endDate": "2026-06-04",
+        "metricsList": [
+          "sge_pm_cny"
+        ],
         "token": "***********"
       }
     }

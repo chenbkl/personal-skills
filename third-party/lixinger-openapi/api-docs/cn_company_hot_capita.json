@@ -14,7 +14,7 @@
     },
     {
       "name": "stockCodes",
-      "required": "Yes",
+      "required": "No",
       "type": "Array",
       "descriptions": [
         "股票代码数组。"
@@ -24,6 +24,50 @@
         "请参考股票信息API获取合法的stockCode。"
       ],
       "example": "[\"300750\",\"600519\",\"600157\"]"
+    },
+    {
+      "name": "sortName",
+      "required": "No",
+      "type": "String",
+      "descriptions": [
+        "排序字段。"
+      ],
+      "constraints": [
+        "不提供stockCodes时必填。"
+      ]
+    },
+    {
+      "name": "sortOrder",
+      "required": "No",
+      "type": "String",
+      "descriptions": [
+        "排序顺序，asc或者desc。"
+      ],
+      "constraints": [
+        "不提供stockCodes时必填。"
+      ]
+    },
+    {
+      "name": "pageIndex",
+      "required": "No",
+      "type": "Number",
+      "descriptions": [
+        "页码，从0开始。"
+      ],
+      "constraints": [
+        "默认值为 0。必须是大于等于 0 的整数。"
+      ]
+    },
+    {
+      "name": "pageSize",
+      "required": "No",
+      "type": "Number",
+      "descriptions": [
+        "每页记录数。"
+      ],
+      "constraints": [
+        "取值范围 1 至 100，默认 100。"
+      ]
     }
   ],
   "responseParams": [
@@ -75,13 +119,23 @@
   ],
   "requestExample": [
     {
-      "desc": "示例1: get by {stockType} codes",
+      "desc": "示例1: 通过公司代码获取",
       "requestBody": {
         "stockCodes": [
           "300750",
           "600519",
           "600157"
         ],
+        "token": "***********"
+      }
+    },
+    {
+      "desc": "示例2: 通过sortName获取",
+      "requestBody": {
+        "sortName": "stn",
+        "sortOrder": "desc",
+        "pageIndex": 0,
+        "pageSize": 50,
         "token": "***********"
       }
     }

@@ -992,7 +992,7 @@
     {
       "desc": "示例1: 通过日期获取",
       "requestBody": {
-        "date": "2026-05-19",
+        "date": "2026-05-26",
         "stockCodes": [
           "601318"
         ],
@@ -1007,8 +1007,8 @@
     {
       "desc": "示例2: 通过时间范围获取",
       "requestBody": {
-        "startDate": "2025-05-29",
-        "endDate": "2026-05-29",
+        "startDate": "2025-06-05",
+        "endDate": "2026-06-05",
         "stockCodes": [
           "601318"
         ],

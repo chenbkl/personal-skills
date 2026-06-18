@@ -84,8 +84,8 @@
     {
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
-        "startDate": "2023-05-29",
-        "endDate": "2026-05-29",
+        "startDate": "2023-06-05",
+        "endDate": "2026-06-05",
         "stockCode": "00700",
         "token": "***********"
       }
