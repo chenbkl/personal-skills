@@ -85,6 +85,10 @@
           "value": "fs"
         },
         {
+          "label": "分红",
+          "value": "dividend"
+        },
+        {
           "label": "配售",
           "value": "spo"
         },
@@ -119,8 +123,8 @@
     {
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
-        "startDate": "2025-06-05",
-        "endDate": "2026-06-05",
+        "startDate": "2025-07-10",
+        "endDate": "2026-07-10",
         "stockCode": "00700",
         "token": "***********"
       }

@@ -82,6 +82,11 @@
       "description": "数据时间"
     },
     {
+      "name": "start_date",
+      "type": "Date",
+      "description": "数据计算起始时间"
+    },
+    {
       "name": "tpr_fl",
       "type": "Number",
       "description": "上市以来总派息率"
@@ -112,7 +117,7 @@
     {
       "desc": "示例2: 通过sortName获取",
       "requestBody": {
-        "sortName": "tpr_fl",
+        "sortName": "start_date",
         "sortOrder": "desc",
         "pageIndex": 0,
         "pageSize": 50,

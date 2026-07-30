@@ -82,6 +82,11 @@
       "description": "数据时间"
     },
     {
+      "name": "f_i_d",
+      "type": "Date",
+      "description": "合同生效日"
+    },
+    {
       "name": "f_p_r",
       "type": "Number",
       "description": "指定时间段投资收益率"
@@ -151,7 +156,7 @@
     {
       "desc": "示例2: 通过sortName获取",
       "requestBody": {
-        "sortName": "f_p_r",
+        "sortName": "f_i_d",
         "sortOrder": "desc",
         "pageIndex": 0,
         "pageSize": 50,

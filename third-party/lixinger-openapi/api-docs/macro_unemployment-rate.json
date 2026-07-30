@@ -64,7 +64,7 @@
       "descriptions": [
         "指标数组。"
       ],
-      "example": "'u_r'",
+      "format": "[granularity].[metricsName].[expressionCalculateType]",
       "regions": [
         {
           "label": "美国支持:",
@@ -96,13 +96,7 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
-                      "label": "单月"
-                    },
-                    {
-                      "label": "单月环比"
+                      "label": "累积环比"
                     }
                   ]
                 }
@@ -118,8 +112,8 @@
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
         "areaCode": "us",
-        "startDate": "2016-06-05",
-        "endDate": "2026-06-05",
+        "startDate": "2023-07-10",
+        "endDate": "2026-07-10",
         "metricsList": [
           "y.u_r.t"
         ],

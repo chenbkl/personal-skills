@@ -96,13 +96,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -135,13 +147,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -174,13 +198,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -213,13 +249,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -252,13 +300,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -291,20 +351,32 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
               ]
             },
             {
-              "label": "规上工业增加值",
+              "label": "规模以上工业增加值",
               "value": "ievaads",
               "ectByGranularity": [
                 {
@@ -330,13 +402,25 @@
                       "label": "累积同比"
                     },
                     {
-                      "label": "TTM"
-                    },
-                    {
                       "label": "单月"
                     },
                     {
+                      "label": "单月同比"
+                    },
+                    {
                       "label": "单月环比"
+                    },
+                    {
+                      "label": "单月年比"
+                    },
+                    {
+                      "label": "TTM"
+                    },
+                    {
+                      "label": "TTM同比"
+                    },
+                    {
+                      "label": "TTM环比"
                     }
                   ]
                 }
@@ -352,8 +436,8 @@
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
         "areaCode": "cn",
-        "startDate": "2016-06-05",
-        "endDate": "2026-06-05",
+        "startDate": "2023-07-10",
+        "endDate": "2026-07-10",
         "metricsList": [
           "y.adsietp.t"
         ],

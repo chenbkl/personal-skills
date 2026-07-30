@@ -99,32 +99,32 @@
     {
       "name": "tr_cpc_w1",
       "type": "Number",
-      "description": "近一个周全收益年化涨跌幅"
+      "description": "近一周全收益涨跌幅"
     },
     {
       "name": "tr_cpc_w2",
       "type": "Number",
-      "description": "近二个周全收益年化涨跌幅"
+      "description": "近二周全收益涨跌幅"
     },
     {
       "name": "tr_cpc_m1",
       "type": "Number",
-      "description": "近一个月全收益年化涨跌幅"
+      "description": "近一个月全收益涨跌幅"
     },
     {
       "name": "tr_cpc_m3",
       "type": "Number",
-      "description": "近三个月全收益年化涨跌幅"
+      "description": "近三个月全收益涨跌幅"
     },
     {
       "name": "tr_cpc_m6",
       "type": "Number",
-      "description": "近六个月全收益年化涨跌幅"
+      "description": "近六个月全收益涨跌幅"
     },
     {
       "name": "tr_cpc_y1",
       "type": "Number",
-      "description": "近一年全收益年化涨跌幅"
+      "description": "近一年全收益涨跌幅"
     },
     {
       "name": "tr_cp_cac_y2",

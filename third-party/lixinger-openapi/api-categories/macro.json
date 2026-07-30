@@ -149,6 +149,14 @@
   },
   {
     "apiKey": "macro/sge-gold-price",
-    "description": ""
+    "description": "获取上海黄金交易所黄金价格数据。可按时间范围获取上海黄金交易所黄金人民币午盘价数据。当用户想了解境内黄金现货价格走势或人民币计价黄金行情时，调用此接口。"
+  },
+  {
+    "apiKey": "macro/vix-fear-index",
+    "description": "返回VIX恐慌指数期货CFD的日度收盘价数据。"
+  },
+  {
+    "apiKey": "macro/market-index",
+    "description": "获取市场指数的收盘点位等数据。可按时间范围获取市场指数的收盘点位、成交量、成交额、涨跌幅数据。当用户想了解市场指数走势或技术分析时，调用此接口。"
   }
 ]

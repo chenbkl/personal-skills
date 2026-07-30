@@ -78,7 +78,7 @@
           "label": "大陆支持:",
           "items": [
             {
-              "label": "1个周Shibor",
+              "label": "1周Shibor",
               "value": "shibor_w1",
               "ectByGranularity": []
             },
@@ -308,11 +308,6 @@
               "ectByGranularity": []
             },
             {
-              "label": "9个月Hibor",
-              "value": "hibor_m9",
-              "ectByGranularity": []
-            },
-            {
               "label": "1年Hibor",
               "value": "hibor_y1",
               "ectByGranularity": []
@@ -432,8 +427,8 @@
       "desc": "示例1: 通过时间范围获取",
       "requestBody": {
         "areaCode": "cn",
-        "startDate": "2016-06-05",
-        "endDate": "2026-06-05",
+        "startDate": "2025-07-10",
+        "endDate": "2026-07-10",
         "metricsList": [
           "shibor_w1"
         ],

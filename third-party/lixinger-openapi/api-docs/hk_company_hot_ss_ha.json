@@ -89,7 +89,7 @@
     {
       "name": "ss_dra_w1",
       "type": "Number",
-      "description": "过去一个周折价率均值"
+      "description": "过去一周折价率均值"
     },
     {
       "name": "ss_dra_m1",
@@ -120,6 +120,16 @@
       "name": "ss_dra_y3",
       "type": "Number",
       "description": "过去三年折价率均值"
+    },
+    {
+      "name": "ss_dra_y5",
+      "type": "Number",
+      "description": "过去五年折价率均值"
+    },
+    {
+      "name": "ss_dra_y10",
+      "type": "Number",
+      "description": "过去十年折价率均值"
     }
   ],
   "requestExample": [

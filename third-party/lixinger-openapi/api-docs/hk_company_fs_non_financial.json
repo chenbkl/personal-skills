@@ -1112,6 +1112,12 @@
                 "ectRef": "利润表"
               },
               {
+                "label": "合同资产周转天数",
+                "value": "m.cca_ds",
+                "desc": "360 / (<small>期末</small>.<strong>营业收入</strong> / ((<small>期末</small>.<strong>合同资产(流动)</strong> + <small>期初</small>.<strong>合同资产(流动)</strong>) / 2))",
+                "ectRef": "利润表"
+              },
+              {
                 "label": "应付票据和应付账款周转天数",
                 "value": "m.npaap_ds",
                 "desc": "360 / ((<small>期末</small>.<strong>营业成本</strong> + <small>期末</small>.<strong>存货</strong> - <small>期初</small>.<strong>存货</strong>) / ((<small>期末</small>.<strong>应付票据及应付账款</strong> + <small>期初</small>.<strong>应付票据及应付账款</strong>) / 2))",
