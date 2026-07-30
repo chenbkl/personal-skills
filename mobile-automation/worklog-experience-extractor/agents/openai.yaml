@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worklog Experience Extractor"
+  short_description: "Extract reusable automation testing lessons."
+  default_prompt: "Use this skill after a mobile automation development phase to extract repeated lessons from chat logs, project notes, failures, and code changes, then propose whether they should become project context, skill updates, new skills, prompts, or be ignored."

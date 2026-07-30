@@ -79,6 +79,8 @@ personal-skills/
 |---|---|---|---|
 | [init-agent-collab](./devtools/init-agent-collab/SKILL.md) | devtools | `/init-agent-collab`, "set up agent collab" | ✅ |
 | [cb-git-review-commit-push](./devtools/cb-git-review-commit-push/SKILL.md) | devtools | review / commit / push requests | ✅ |
+| [business-module-test-builder](./mobile-automation/business-module-test-builder/SKILL.md) | mobile-automation | build iOS/Android business-module automation tests | ✅ |
+| [worklog-experience-extractor](./mobile-automation/worklog-experience-extractor/SKILL.md) | mobile-automation | 复盘自动化测试开发过程并提炼可沉淀经验 | ✅ |
 | [rough-valuation](./investment/rough-valuation/SKILL.md) | investment | "毛估估XX公司" / "目测XX值不值得买" | ✅ |
 | [lixinger-openapi](./third-party/lixinger-openapi/skill.md) | third-party | 查 A股/港股 估值·财报·分红 等基本面数据 | 第三方自带 |
 
