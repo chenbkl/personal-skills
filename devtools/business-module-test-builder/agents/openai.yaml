@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Module Test Builder"
+  short_description: "Build mobile business-module automation tests."
+  default_prompt: "Use this skill to develop iOS or Android automation tests for a new business module with stable identifiers, layered flows, real-device exploration, and demo-ready full-chain cases."
