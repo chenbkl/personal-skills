@@ -16,6 +16,7 @@ Read only the references needed for the current task:
 - Start every new module with `references/core-workflow.md`.
 - For iOS modules, also read `references/ios-adapter.md`.
 - For Android modules, also read `references/android-adapter.md`.
+- For Android emulator startup, ADB repair, `adb devices` failures, or mobile-MCP/uiautomator2 device reachability issues, read `references/android-emulator-runbook.md`.
 - For payment, card binding, password changes, signing, unbinding, clearing data, uninstall/reinstall, account deletion, or other state-changing flows, read `references/risky-flows.md`.
 - For suite runners, TUI/demo scripts, or presentation-ready regression ordering, read `references/demo-suite.md`.
 
