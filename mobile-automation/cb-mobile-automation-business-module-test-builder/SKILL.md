@@ -1,5 +1,5 @@
 ---
-name: business-module-test-builder
+name: cb-mobile-automation-business-module-test-builder
 description: Use when building or extending iOS or Android automation tests for a new business module, including source-code analysis, stable accessibility identifiers/resource ids, state/actions/flow/test layering, real-device exploration with MCP or native drivers, risky-flow handling for payment/binding/password/signing flows, and demo suite integration.
 ---
 

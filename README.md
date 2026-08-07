@@ -61,8 +61,9 @@ personal-skills/
 ├── install.sh          # 把每个 skill 软链进 ~/.claude/skills 和 ~/.codex/skills
 ├── check-update.sh     # 只读：比对本地与远程 HEAD（不拉取）
 ├── update.sh           # git pull --ff-only --autostash + install.sh
-├── devtools/           # cb-git-review-commit-push, init-agent-collab
-├── investment/         # rough-valuation
+├── devtools/           # cb-git-review-commit-push, cb-init-agent-collab
+├── investment/         # cb-investment-rough-valuation
+├── mobile-automation/  # cb-mobile-automation-*
 └── third-party/        # lixinger-openapi（理杏仁，整份入库）
 ```
 
@@ -77,18 +78,19 @@ personal-skills/
 
 | Skill | Category | Trigger | Step 0 自更新 |
 |---|---|---|---|
-| [init-agent-collab](./devtools/init-agent-collab/SKILL.md) | devtools | `/init-agent-collab`, "set up agent collab" | ✅ |
+| [cb-init-agent-collab](./devtools/cb-init-agent-collab/SKILL.md) | devtools | `/cb-init-agent-collab`, "set up agent collab" | ✅ |
 | [cb-git-review-commit-push](./devtools/cb-git-review-commit-push/SKILL.md) | devtools | review / commit / push requests | ✅ |
-| [business-module-test-builder](./mobile-automation/business-module-test-builder/SKILL.md) | mobile-automation | build iOS/Android business-module automation tests | ✅ |
-| [worklog-experience-extractor](./mobile-automation/worklog-experience-extractor/SKILL.md) | mobile-automation | 复盘自动化测试开发过程并提炼可沉淀经验 | ✅ |
-| [rough-valuation](./investment/rough-valuation/SKILL.md) | investment | "毛估估XX公司" / "目测XX值不值得买" | ✅ |
+| [cb-mobile-automation-business-module-test-builder](./mobile-automation/cb-mobile-automation-business-module-test-builder/SKILL.md) | mobile-automation | build iOS/Android business-module automation tests | ✅ |
+| [cb-mobile-automation-observe-android-focus](./mobile-automation/cb-mobile-automation-observe-android-focus/SKILL.md) | mobile-automation | 记录 Android 焦点窗口，定位页面跳转问题 | ✅ |
+| [cb-mobile-automation-worklog-experience-extractor](./mobile-automation/cb-mobile-automation-worklog-experience-extractor/SKILL.md) | mobile-automation | 复盘自动化测试开发过程并提炼可沉淀经验 | ✅ |
+| [cb-investment-rough-valuation](./investment/cb-investment-rough-valuation/SKILL.md) | investment | "毛估估XX公司" / "目测XX值不值得买" | ✅ |
 | [lixinger-openapi](./third-party/lixinger-openapi/skill.md) | third-party | 查 A股/港股 估值·财报·分红 等基本面数据 | 第三方自带 |
 
 ### third-party 策略（理杏仁 lixinger-openapi）
 - **整份入库**，保留它自带的自动更新（步骤1：比对远程 doc-version → 自动下载覆盖 `api-docs/`）。
 - 它自我更新会就地改动被跟踪文件 → `update.sh` 的 `--autostash` 吸收，不冲突；这些 diff 偶尔 commit 即可（相当于理杏仁 API 文档的版本史）。
 - `token.json` 已 `.gitignore`，**不入库**；每台机器单独配（token 取自 https://www.lixinger.com/open/api/token）。
-- 不给它加 Step 0（它有自己的机制）。`rough-valuation` 取数依赖它。
+- 不给它加 Step 0（它有自己的机制）。`cb-investment-rough-valuation` 取数依赖它。
 
 ## How skills are discovered
 
@@ -101,7 +103,7 @@ The two agents have separate skill dirs, but `install.sh` symlinks the same sour
 ## Cross-platform / cross-agent notes
 
 - **Same path on every machine recommended** (e.g. clone to `~/code/personal-skills` everywhere). `install.sh` resolves the repo path from its own location, so it still works if you clone elsewhere — just rerun `install.sh` after moving the repo.
-- **Tool-name compatibility**: Claude Code's tools (Bash / Read / Edit / Write / Glob / Grep) and Codex's tool set have different names. Skills that mostly describe behavior in prose (like `init-agent-collab`) are fully cross-platform. Skills that hardcode tool names may only work on one side — prefer generic verbs ("read the file", "run the command") in SKILL.md prose.
+- **Tool-name compatibility**: Claude Code's tools (Bash / Read / Edit / Write / Glob / Grep) and Codex's tool set have different names. Skills that mostly describe behavior in prose (like `cb-init-agent-collab`) are fully cross-platform. Skills that hardcode tool names may only work on one side — prefer generic verbs ("read the file", "run the command") in SKILL.md prose.
 - **install.sh refuses to overwrite real directories** at the target location. If `~/.claude/skills/<name>` is a real dir (not a symlink), it's skipped — move/delete it manually first, then rerun install.
 - **Pulling updates**: on any machine, `cd ~/code/personal-skills && git pull` is enough. Symlinks already point at the live files.
 

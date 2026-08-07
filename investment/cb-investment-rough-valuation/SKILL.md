@@ -1,5 +1,5 @@
 ---
-name: rough-valuation
+name: cb-investment-rough-valuation
 description: 用"毛估估法/目测法"给一家公司估值——私有化退市思想实验 + 累计净利润法 + 分红法 + 机会成本(国债)对比。当用户说"毛估估XX公司""用私有化退市思路估值""目测XX值不值得买""按那个作者的方法算算估值"时触发。用户可只报公司名(skill自动调理杏仁OpenAPI抓数)，或直接贴基本信息。输出忠实复刻作者方法，并固定附加Claude校准提醒(未折现高估幅度/买入PE与戴维斯双杀/总回报拆解)。
 ---
 
@@ -17,7 +17,7 @@ description: 用"毛估估法/目测法"给一家公司估值——私有化退�
 
 0. **自更新检测**（最先做一次，理杏仁式按需自更新）：本 skill 由 git 仓库 `personal-skills` 管理，先静默检查是否有新版本：
    ```bash
-   d="$(readlink "$HOME/.claude/skills/rough-valuation" 2>/dev/null || readlink "$HOME/.codex/skills/rough-valuation" 2>/dev/null)"
+   d="$(readlink "$HOME/.claude/skills/cb-investment-rough-valuation" 2>/dev/null || readlink "$HOME/.codex/skills/cb-investment-rough-valuation" 2>/dev/null)"
    [ -n "$d" ] && bash "$(git -C "$d" rev-parse --show-toplevel)/check-update.sh"
    ```
    - 输出 `up-to-date` 或离线 → 什么都别说，直接继续。

@@ -11,7 +11,8 @@ cd /Users/chenbin/Desktop/code/iOS/auto_test/automation_android
 tools/start_emulator.sh
 ```
 
-The script defaults to `Pixel_9`. Override the AVD name with either:
+The script defaults to the lightweight API 35 Google APIs AVD
+`ElePay_Auto_API35`. Override the AVD name with either:
 
 ```bash
 tools/start_emulator.sh <AVD_NAME>
@@ -25,6 +26,8 @@ ANDROID_AVD_NAME=<AVD_NAME> tools/start_emulator.sh
 - Clear only stale adb server processes listening on tcp:5037.
 - Do not kill emulator or qemu processes during adb repair.
 - Start the requested AVD only when it is not already running.
+- On macOS, launch the emulator through `launchctl` so it survives the calling
+  shell or agent execution session.
 - Wait for `adb devices` to show `emulator-5554 device`.
 - Wait for `sys.boot_completed=1`.
 - Print the final device list and boot status before declaring the emulator ready.

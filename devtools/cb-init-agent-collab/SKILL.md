@@ -1,5 +1,5 @@
 ---
-name: init-agent-collab
+name: cb-init-agent-collab
 description: Initialize or retrofit multi-agent collaboration files (PROJECT_GUIDE.md + per-agent entry points like CLAUDE.md / AGENTS.md) for a project. Use when the user wants to set up agent collaboration conventions, asks to "init agents", "set up agent collab", "create AGENTS.md and CLAUDE.md", or wants both Claude Code and Codex (or other agents) to share the same project rules. Works both for new projects and for retrofitting existing projects that already have CLAUDE.md / AGENTS.md.
 ---
 
@@ -17,7 +17,7 @@ This skill sets up a **shared single-source-of-truth document** (`PROJECT_GUIDE.
 This skill is managed by the git repo `personal-skills`. Before anything else, silently check for a newer version (Lixinger-style on-demand self-update):
 
 ```bash
-d="$(readlink "$HOME/.claude/skills/init-agent-collab" 2>/dev/null || readlink "$HOME/.codex/skills/init-agent-collab" 2>/dev/null)"
+  d="$(readlink "$HOME/.claude/skills/cb-init-agent-collab" 2>/dev/null || readlink "$HOME/.codex/skills/cb-init-agent-collab" 2>/dev/null)"
 [ -n "$d" ] && bash "$(git -C "$d" rev-parse --show-toplevel)/check-update.sh"
 ```
 
@@ -28,7 +28,7 @@ d="$(readlink "$HOME/.claude/skills/init-agent-collab" 2>/dev/null || readlink "
 
 Trigger this skill when the user:
 
-- Says explicitly: `/init-agent-collab`, "init agents", "set up agent collab", "initialize project for Claude and Codex"
+- Says explicitly: `/cb-init-agent-collab`, "init agents", "set up agent collab", "initialize project for Claude and Codex"
 - Describes the pain: "I keep telling agents the same rules over and over", "every project I have to redo this", "I want both Claude and Codex to read the same conventions"
 - Starts a brand new project and mentions multiple agents
 - Asks how to manage CLAUDE.md / AGENTS.md sprawl across many projects
@@ -193,7 +193,7 @@ Plus a one-line "next session, any agent starting in this directory will auto-lo
 ## Example invocation flow (fresh iOS project)
 
 ```
-User: /init-agent-collab
+User: /cb-init-agent-collab
 Claude: [detects: empty project, has Podfile and Swift files, has .git but no commits]
 Claude: [infers: iOS project, no existing CLAUDE/AGENTS.md, fresh init]
 Claude: AskUserQuestion ×1 combined:
@@ -207,7 +207,7 @@ Claude: [summary table + next-session note]
 ## Example invocation flow (retrofit existing project)
 
 ```
-User: /init-agent-collab
+User: /cb-init-agent-collab
 Claude: [detects: existing CLAUDE.md 200 lines, existing AGENTS.md 120 lines, no PROJECT_GUIDE.md]
 Claude: [reads both files]
 Claude: [analyzes: 80% overlap between CLAUDE.md and AGENTS.md — that's the shared content;

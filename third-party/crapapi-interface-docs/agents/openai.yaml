@@ -1,0 +1,4 @@
+interface:
+  display_name: "CrapAPI 接口文档查询"
+  short_description: "按接口 URL 查询电e宝 CrapAPI 入参与出参"
+  default_prompt: "使用 $crapapi-interface-docs 查询这个接口的入参、出参和错误码。"

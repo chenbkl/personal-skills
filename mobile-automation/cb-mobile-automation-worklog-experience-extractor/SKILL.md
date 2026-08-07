@@ -1,5 +1,5 @@
 ---
-name: worklog-experience-extractor
+name: cb-mobile-automation-worklog-experience-extractor
 description: Use after mobile automation testing development, debugging, or demo-suite work to extract reusable lessons from chat history, project work logs, failure logs, and code changes. Use when the user asks to review a development phase, identify repeated automation testing problems, decide what should become project context, update an existing skill, create a new skill, produce a reusable prompt, or avoid preserving one-off noise.
 ---
 

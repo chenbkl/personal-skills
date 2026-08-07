@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android 焦点窗口观察器"
+  short_description: "记录 Android 设备当前焦点窗口，定位页面跳转问题"
+  default_prompt: "用 $cb-mobile-automation-observe-android-focus 记录模拟器当前焦点窗口，帮我定位页面跳转问题。"
