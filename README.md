@@ -63,6 +63,7 @@ personal-skills/
 ├── update.sh           # git pull --ff-only --autostash + install.sh
 ├── devtools/           # cb-git-review-commit-push, cb-init-agent-collab
 ├── investment/         # cb-investment-rough-valuation
+├── education/          # cb-obsidian-math-notes
 ├── mobile-automation/  # cb-mobile-automation-*
 └── third-party/        # lixinger-openapi（理杏仁，整份入库）
 ```
@@ -84,6 +85,7 @@ personal-skills/
 | [cb-mobile-automation-observe-android-focus](./mobile-automation/cb-mobile-automation-observe-android-focus/SKILL.md) | mobile-automation | 记录 Android 焦点窗口，定位页面跳转问题 | ✅ |
 | [cb-mobile-automation-worklog-experience-extractor](./mobile-automation/cb-mobile-automation-worklog-experience-extractor/SKILL.md) | mobile-automation | 复盘自动化测试开发过程并提炼可沉淀经验 | ✅ |
 | [cb-investment-rough-valuation](./investment/cb-investment-rough-valuation/SKILL.md) | investment | "毛估估XX公司" / "目测XX值不值得买" | ✅ |
+| [cb-obsidian-math-notes](./education/cb-obsidian-math-notes/SKILL.md) | education | 整理初中数学易忘点并保存到 Obsidian | — |
 | [lixinger-openapi](./third-party/lixinger-openapi/skill.md) | third-party | 查 A股/港股 估值·财报·分红 等基本面数据 | 第三方自带 |
 
 ### third-party 策略（理杏仁 lixinger-openapi）
